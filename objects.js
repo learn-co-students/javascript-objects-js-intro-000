@@ -6,10 +6,7 @@ function updatePlaylist(playlist,artist,title){
   playlist [artist] = title;
   return playlist
 }
-//artist = "Kanye"
-
   function removeFromPlaylist(playlist,artist){
-
     delete playlist[artist]
     return playlist
 }

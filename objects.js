@@ -1,7 +1,7 @@
 var playlist = {
-  bruce springsteen: 'Born In The USA',
-  bryan adams: 'Summer Of 69',
-  enrique iglesias: 'Bailando'
+  'bruce springsteen': "Born In The USA",
+  'bryan adams': "Summer Of 69",
+  'enrique iglesias': "Bailando"
 };
 
 function updatePlaylist(playlist, artist, songTitle){

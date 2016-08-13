@@ -1,7 +1,7 @@
 var playlist = {
-  bruce springsteen: "Born In The USA",
-  bryan adams: "Summer Of 69",
-  sting: "I'll be missing you"
+  bruce springsteen: 'Born In The USA',
+  bryan adams: 'Summer Of 69',
+  sting: 'I\'ll be missing you'
 };
 
 function updatePlaylist(playlist, artist, songTitle){

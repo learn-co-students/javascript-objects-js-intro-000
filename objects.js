@@ -6,6 +6,6 @@ function updatePlaylist(playlist, artistName, songTitle){
 }
 
 function removeFromPlaylist(playlist, artistName){
-  delete Kanye: 'Gold Digger'
+  delete playlist.Kanye
   return playlist
 }

@@ -3,14 +3,14 @@ var playlist = {
   "Iron Maiden": "Purgatory"
 }
 
-function updatePlaylist(playlist, artist, song) {
-  playlist[artist] = song
+function updatePlaylist(playlist, artistName, song) {
+  playlist[artistName] = song
 
   return playlist
 }
 
-function removeFromPlaylist(playlist, artist) {
-  delete playlist[artist]
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
 
   return playlist
 }

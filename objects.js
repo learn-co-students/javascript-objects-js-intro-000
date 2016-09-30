@@ -1,4 +1,4 @@
-var playlist = {drake:"One Dance"}
+var playlist = {drake:"oneDance"}
 
 function updatePlaylist(obj,key,value)
 {
@@ -8,5 +8,6 @@ function updatePlaylist(obj,key,value)
 
 function removeFromPlaylist(playlist, artistName)
 {
-  delete playlist.drake;
+  delete playlist[artistName];
+  return playlist;
 }

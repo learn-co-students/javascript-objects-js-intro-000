@@ -1,4 +1,4 @@
-var playlist = {"Phil Ochs": "Here's to the State of Mississippi"}
+var playlist = {key:"value"}
 
 function updatePlaylist(obj, key, value){
   // Object.assign({ "Phili Ochs": "Here's to the State of Mississippi" })
@@ -8,7 +8,7 @@ function updatePlaylist(obj, key, value){
 }
 
 function removeFromPlaylist (obj,key) {
-  delete playlist["Phil Ochs"];
+  delete playlist.key;
   return playlist
 
 }

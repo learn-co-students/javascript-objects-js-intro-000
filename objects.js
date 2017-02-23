@@ -1,8 +1,13 @@
-var meals = {};
-var meals = new Object();
+var playlist = new Object({
+  "Hans Zimmer" : "Time"
+});
 
-var meals = { breakfast: "oatmeal" };
- 
-// or, equivalently
- 
-var meals = new Object({ breakfast: 'oatmeal' })
+function updatePlaylist(playlist, artist, song) {
+  playlist[artist] = song;
+  return playlist;
+}
+
+function removeFromPlaylist(playlist, name) {
+  delete playlist[name];
+  return playlist;
+}

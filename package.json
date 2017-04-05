@@ -2,6 +2,10 @@
   "name": "javascript-objects",
   "version": "0.1.0",
   "description": "Introduction to JavaScript objects on Learn.co",
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
   "main": "objects.js",
   "directories": {
     "test": "test"

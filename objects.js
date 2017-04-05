@@ -6,12 +6,13 @@ var playlist = {
 
 var updatePlaylist = (playlist, artistName, songTitle) => {
   playlist[artistName] = songTitle;
+  return playlist;
 }
 
 
 var removeFromPlaylist = (playlist, artistName) => {
-  delete playlist.artistName;
+  delete playlist[artistName];
+  return playlist;
 }
 
-
-removeFromPlaylist(playlist, 'Slowdive');
+removeFromPlaylist(playlist, "Slowdive");

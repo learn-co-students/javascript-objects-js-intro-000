@@ -6,7 +6,10 @@ the values will be song titles. (What limitation does this impose on our
 playlist?)
 */
 
-var playlist = new Object({ 'MJ': 'Thriller' })
+  var playlist = {
+  'MJ' : 'Thriller',
+  'Madonna' : 'Holiday',
+}
 
 /*
 Create a function updatePlaylist that accepts three parameters: the playlist
@@ -16,10 +19,8 @@ object. The function should return the whole playlist.
 */
 
 function updatePlaylist(playlist, artistName, songTitle) {
-  'MJ'.'Thriller';
-  'MJ'.'Bad';
-  'MJ'.'PYT';
-  return updatePlaylist
+  playlist[artistName] = songTitle
+  return playlist
 }
 
 /*
@@ -29,6 +30,6 @@ key-value pair from the playlist and return the updated playlist.
 */
 
 function removeFromPlaylist(playlist, artistName) {
-  delete playlist.artistName;
+  delete playlist[artistName]
   return playlist
 }

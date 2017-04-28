@@ -1,10 +1,20 @@
 var playlist = {
-  fiftyCent:["song 1", "song 2"],
-  mikeJackson: ["song 3", "song 4"]
+  'Foo Fighters': 'Everlong',
+  Prince: 'Purple Rain'
 }
 
-function updatePlaylist(obj, artistName, songtitle) {
-      return Object.assign({}, obj, [artistName]:songtitle);
+function updatePlaylist(playlist, artist, song) {
+  // Remember, because one of this function's arguments
+  // is `playlist`, the `playlist` _inside_ the function
+  // is not the same as the top-level `playlist` outside
+  // the function
+  playlist[artist] = song
+
+  return playlist
 }
 
-updatePlaylist(playlist, 'Eminem', 'song 5');
+function removeFromPlaylist(playlist, artist) {
+  delete playlist[artist]
+
+  return playlist
+}

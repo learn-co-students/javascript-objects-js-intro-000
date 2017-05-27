@@ -1,49 +1,21 @@
 /*global describe, it */
+var playlist = {
+  'Foo Fighters': 'Everlong',
+  Prince: 'Purple Rain'
+}
 
-const expect = require('chai').expect
-const babel = require('babel-core')
-const fs = require('fs')
-const jsdom = require('mocha-jsdom')
-const path = require('path')
+function updatePlaylist(playlist, artist, song) {
+  // Remember, because one of this function's arguments
+  // is `playlist`, the `playlist` _inside_ the function
+  // is not the same as the top-level `playlist` outside
+  // the function
+  playlist[artist] = song
 
-describe('objects', () => {
-  const babelResult = babel.transformFileSync(
-    path.resolve(__dirname, '..', 'objects.js'), {
-      presets: ['es2015']
-    }
-  )
-  jsdom({
-    src: babelResult.code
-  })
+  return playlist
+}
 
-  it('defines an object called `playlist` containing at least one artist-song pair', () => {
-    expect(typeof playlist).to.equal('object')
-    expect(Object.keys(playlist).length).to.be.greaterThan(0)
-  })
+function removeFromPlaylist(playlist, artist) {
+  delete playlist[artist]
 
-  describe('updatePlaylist(playlist, artistName, songTitle)', () => {
-    before(() => {
-      playlist['Slowdive'] = 'Alison'
-      playlist['My Bloody Valentine'] = 'Sometimes'
-    })
-
-    it('adds the `artistName: songTitle` key-value pair to `playlist`', () => {
-      updatePlaylist(playlist, 'Phil Ochs', "Here's to the State of Mississippi")
-
-      expect(playlist).
-        to.contain.all.keys({'Slowdive': 'Alison', 'My Bloody Valentine': 'Sometimes', 'Phil Ochs': "Here's to the State of Mississippi"})
-    })
-  })
-
-  describe('removeFromPlaylist(playlist, artistName)', () => {
-    it('removes `artistName` from `playlist`', () => {
-      removeFromPlaylist(playlist, 'Slowdive')
-
-      expect(playlist).
-        to.contain.all.keys({'My Bloody Valentine': 'Sometimes', 'Phil Ochs': "Here's to the State of Mississippi"})
-
-      expect(playlist).
-        not.to.have.all.keys({'Slowdive': 'Alison'})
-    })
-  })
-})
+  return playlist
+}

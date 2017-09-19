@@ -1,9 +1,12 @@
-var playlist = {
-  danile: 'yesew eij',
-  ephrem: 'atalfim bilo',
-  lili: 'min addis neger ale'
+var playlist = { danile: 'yesew eij' }
+
+
+function updatePlaylist(playlist, artistName, songTitle) {
+   playlist[artistName]  = songTitle
+   return playlist
 }
 
-function updatePlaylist(obj, key, value) {
-  return obj = {key: value}
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
+  return playlist
 }

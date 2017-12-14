@@ -3,13 +3,11 @@ var playlist = {
 };
 
 function updatePlaylist(playlist, artistName, songTitle) {
-  playlist['Slowdive'] = 'Alison';
-  playlist['My Bloody Valentine'] = 'Sometimes';
-  playlist['Phil Ochs'] = "Here's to the State of Mississippi";
+  playlist[artistName] = songTitle;
   return playlist;
 }
 
 function removeFromPlaylist(playlist, artistName) {
-  delete playlist['Slowdive'];
+  delete playlist[artistName];
   return playlist;
 }

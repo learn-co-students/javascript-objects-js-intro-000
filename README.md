@@ -1,3 +1,4 @@
+he deleting part 
 # JavaScript Objects
 
 ## Overview

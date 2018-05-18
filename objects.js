@@ -1,14 +1,16 @@
-var playlist ={`Nas`:`Hate me now`,
-                Jay Z:`99 Problems` }
+var playlist = {
+    Nas: 'Hate me now',
+    JayZ: '99 Problems'
+  };
 
-function updatePlaylist( playlist, artist, song){
-  playlist[artist] = song
+function updatePlaylist( playlist, artistName, song){
+  playlist[artistName] = song
 
   return playlist
 }
 
-function removeFromPlaylist(playlist, artist) {
-  delete playlist[artist]
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
 
   return playlist
 }

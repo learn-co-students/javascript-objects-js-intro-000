@@ -1,6 +1,13 @@
 
 var playlist = {Michael: "Thriller"};
 
-function updatePlaylist(playlist, artist, song){
-  return playlist.Prince("Doves Cry")
+function updatePlaylist(playlist, artistName, songTitle)
+  { 
+    playlist[artistName] = songTitle
+    return playlist
+}
+
+function removeFromPlaylist(playlist, artistName){
+  delete playlist[artistName];
+
 }

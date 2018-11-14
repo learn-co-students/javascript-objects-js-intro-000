@@ -1,9 +1,11 @@
-var playlist = { Coldplay: 'The Scientist', Eminem: 'Rap God', Lorde: 'Homemade Dynamite' } 
+var playlist = { Slowdive: 'Alison', MyBloodyValentine: 'Sometimes'} 
 
 function updatePlaylist (playlist, artistName, songTitle) {
-  playlist['Slowdive'] = 'Alison';
-  playlist['My Bloody Valentine'] = 'Sometimes';
+  playlist['Phil Ochs'] = "Here's to the State of Mississippi"
   return playlist
 }
-updatePlaylist(playlist, 'Slowdrive', 'Alison');
-updatePlaylist(plalist, 'My Bloody Valentine', 'Sometimes');
+
+function removeFromPlaylist(artistName, songTitle) {
+  delete playlist.Slowdive;
+  return playlist;
+}

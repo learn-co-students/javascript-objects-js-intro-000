@@ -1,16 +1,21 @@
 
-var playlist = {artistName: "Michael", songTitle: "Slowdive"};
-var playlist = {artistName: "Mariah", songTitle: "My Bloody Valentine"};
-var playlist = {artistName: "Beyonce", songTitle: "Phil Ochs"};
+var playlist = {
+  artistName: "Michael", songTitle: "Slowdive"
+};
+var playlist = {
+  artistName: "Mariah", songTitle: "My Bloody Valentine"
+};
+var playlist = {
+  artistName: "Beyonce", songTitle: "Phil Ochs"
+};
 
-function updatePlaylist(Playlist, artistName, songTitle) {
-  return object.assign({}, Playlist, { [artistName]: songTitle});
+function updatePlaylist (playlist, artistName, songTitle){
+playlist[artistName] = songTitle;
+return playlist;
+};
 
- function removeFromPlaylist(Playlist, artistName) {
-   delete Playlist[artistName];
-   return Playlist;
- }
+function removeFromPlaylist(Playlist, artistName) {
+  delete Playlist[artistName];
+  return updatePlaylist;
 
- removeFromPlaylist(playlist, "artistName");
-
- };
+};

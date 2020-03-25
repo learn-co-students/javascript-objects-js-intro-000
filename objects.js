@@ -1,20 +1,18 @@
 var playlist = {
-  Slowdive: 'Alison',
+'Kanye': 'Yikes',
+'Tupac': 'Changes'
 };
 
-playlist['My Bloody Valentine'] = 'Sometimes';
-
-function updatePlaylist() {
+function updatePlaylist(playlist,artistName, songTitle) {
   
-  playlist['Phil Ochs'] =  "Here's to the State of Mississippi";
-  
+  playlist[artistName] = songTitle;
   return playlist;
   
 }
 
-function removeFromPlaylist() {
+function removeFromPlaylist(playlist, artistName) {
   
-delete playlist.Slowdive;
+delete playlist[artistName];
 
 return playlist; 
   

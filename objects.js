@@ -1,7 +1,15 @@
-var playlist = {
-  Prince : "Doves Cry",
-  MCR : "I'm Ok"
+const playlist = {
+  Prince : 'Doves Cry',
+  MCR : 'Im Ok'
 }
 
-funnction ONCE (playlist, BSB, BSB is Back) {
-  playlist ['BSB'] = 'BSB is Back' };
+
+function updatePlaylist (playlist, BSB , Life) {
+  playlist[BSB]= 'Life'
+  return playlist
+}
+
+function removeFromPlaylist(playlist, BSB){
+  delete playlist[BSB]
+  return playlist
+}

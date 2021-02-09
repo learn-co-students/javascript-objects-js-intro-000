@@ -1,12 +1,15 @@
 var playlist = {
-  'Phil Ochs': 'Here\'s to the State of Mississippi',
+  'The Weeknd': 'Call Out My Name',
+  'Taylor Swift': 'willow'
 }
 
 function updatePlaylist(playlist, artistName, songTitle) {
-  return Object.assign({}, playlist, {[artistName]: songTitle})
+  playlist[artistName] = songTitle;
+
+  return playlist;
 }
 
 function removeFromPlaylist(playlist, artistName) {
-  delete playlist.Slowdive;
+  delete playlist[artistName];
   return playlist;
 }
